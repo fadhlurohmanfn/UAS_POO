@@ -1,0 +1,270 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Meta Configs -->
+    <meta name="author" content="Amraoui Mohamed">
+    <meta name="description" content="An Open Source Project">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'bootstrap\css\bootstrap.min.css' %}">
+    <script src="{% static 'bootstrap\js\bootstrap.bundle.min.js' %}"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="{% static 'fontawesome\css\all.css' %}">
+    <link rel="stylesheet" href="{% static 'fontawesome\css\brands.css' %}">
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="{% static 'css\style.css' %}">
+    <!-- Site Title -->
+    <title>
+        X-Tech Solution
+        {% block subtitle %}
+        {% endblock subtitle %}
+    </title>
+</head>
+
+<body class="bg-light">
+    <!-- Navbar Block -->
+    {% block navbar %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}">X-Tech Solution</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'home' %}#header">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% endblock navbar %}
+    <!-- Header Block -->
+    {% block header %}
+    <header class="container-fluid grid-row bg-primary" id="header">
+        <div class="heading d-flex flex-column">
+            <span class="heading-subtitle">welcome to</span>
+            <span class="heading-title">X-Tech Solution</span>
+            <span class="heading-subtitle">Bring Your Ideas to life</span>
+            <a class="btn btn-outline-light">our services</a>
+        </div>
+        <div class="image">
+            <img src="{% static 'assets\images\header-bg.png' %}">
+        </div>
+    </header>
+    {% endblock header %}
+    <!-- Content Block -->
+    {% block content %}
+    <div class="container d-flex flex-column" style="max-width: 95%;">
+        <main>
+            {% block main %}
+            <section id="about">
+                <div class="image">
+                    <img src="{% static 'assets\images\about-us.png' %}">
+                </div>
+                <div class="text">
+                    <div class="section-title">
+                        Who Are We
+                    </div>
+                    <p>
+                        Kami X-Tech Solution adalah pioner dalam menyediakan solusi teknologi yang mengubah
+                        wajah bisnis. Dengan fokus pada inovasi, kualitas, dan kerjasama, kami berkomitmen
+                        untuk membantu pelanggan mengatasi tantangan bisnis mereka dengan menghadirkan solusi
+                        yang cerdas dan terdepan. Tim kami yang berpengalaman dalam berbagai bidang teknologi
+                        menawarkan layanan mulai dari pengembangan peragkat lunak hingga integrasi sistem,
+                        dengan penekanan pada keamanan informasi dan analisis data canggih. Kami tidak hanya
+                        menawarkan solusi teknologi yang unggul, tetapi juga memberikan dukungan pelanggan terbail
+                        dan berkomitmen pada keberlanjutan, menjadikan kami mitra ideal untuk mendukung transformasi
+                        digital dan pertumbuhan bisnis anda.
+                    </p>
+                </div>
+            </section>
+            <section id="team">
+                <div class="section-title">our team</div>
+<div class="team-box">
+    <div class="team-member d-flex flex-column">
+        <img class="member-picture" src="{% static 'assets\images\Navin.jpg' %}" alt="team member">
+        <span class="member-name">Fadhlurohman F.N</span>
+    </div>
+    <div class="team-member d-flex flex-column">
+        <img class="member-picture" src="{% static 'assets\images\Farhan.jpg' %}" alt="team member">
+        <span class="member-name">M. Farhan F</span>
+    </div>
+    <div class="team-member d-flex flex-column">
+        <img class="member-picture" src="{% static 'assets\images\Dhefi.jpeg' %}" alt="team member">
+        <span class="member-name">Dhefi Nurkholik</span>
+    </div>
+</div>
+            </section>
+            <section id="services">
+                <div class="section-title">
+                    Our Services
+                </div>
+                <div class="card-box">
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-bullhorn"></i>
+                            Custom Software Development
+                        </div>
+                        <hr>
+                        <p>
+                            Membantu Anda merancang dan mengembangkan perangkat lunak khusus yang sesuai dengan kebutuhan unik bisnis Anda. Dengan pendekatan yang terfokus pada inovasi, tim pengembangan kami menciptakan solusi perangkat lunak yang dapat meningkatkan efisiensi operasional dan memberikan pengalaman pengguna yang superior
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-bullhorn"></i>
+                            Data Analytics and Insights
+                        </div>
+                        <hr>
+                        <p>
+                            Menyediakan layanan analisis data canggih untuk mengubah data menjadi wawasan yang berharga. Tim analis data kami menggunakan algoritma dan teknik terbaru untuk membantu Anda membuat keputusan berbasis fakta, meningkatkan strategi bisnis, dan mengoptimalkan kinerja operasional
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-bullhorn"></i>
+                            Information Security Solutions
+                        </div>
+                        <hr>
+                        <p>
+                            Menghadirkan solusi keamanan informasi yang komprehensif untuk melindungi bisnis Anda dari ancaman siber. Dengan penekanan pada enkripsi data, deteksi ancaman, dan keamanan jaringan, kami memastikan bahwa informasi berharga Anda tetap aman dan terlindungi
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-bullhorn"></i>
+                            System Integration Services
+                        </div>
+                        <hr>
+                        <p>
+                            Memfasilitasi integrasi sistem yang mulus untuk meningkatkan interoperabilitas dan efisiensi. Tim integrasi sistem kami bekerja dengan cermat untuk mengintegrasikan perangkat keras dan perangkat lunak yang berbeda, memastikan bahwa sistem Anda beroperasi secara sinergis dan terkoordinasi
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-bullhorn"></i>
+                            Technical Support and Maintenance
+                        </div>
+                        <hr>
+                        <p>
+                            Memberikan dukungan teknis yang andal dan layanan pemeliharaan untuk memastikan kelancaran operasional sistem dan aplikasi Anda. Tim dukungan kami siap membantu Anda dengan respons cepat, pemecahan masalah yang efisien, dan pemeliharaan rutin untuk menjaga kinerja optimal
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">
+                            <i class="fas fa-bullhorn"></i>
+                            Cloud Solutions
+                        </div>
+                        <hr>
+                        <p>
+                            Menawarkan solusi cloud yang dapat disesuaikan untuk meningkatkan fleksibilitas, skalabilitas, dan aksesibilitas data Anda. Dari migrasi ke cloud hingga pengelolaan infrastruktur cloud, kami memungkinkan bisnis Anda untuk mengambil keuntungan penuh dari potensi cloud computing
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section id="portfolio">
+                <div class="section-title">
+                    Our works
+                </div>
+                <div class="card-box">
+                    <div class="card">
+                        <div class="card-thumbnail">
+                            <img src="{% static 'assets\images\enter.png' %}">
+                        </div>
+                        <div class="card-title">
+                            Enterprise Resource Planning (ERP) Implementation for Global Manufacturer
+                        </div>
+                        <p>
+                            Menyelenggarakan implementasi sistem Enterprise Resource Planning (ERP) untuk produsen global, mengintegrasikan dan mengoptimalkan proses bisnis mereka. Proyek ini mencakup pengelolaan rantai pasokan, manajemen inventaris, dan pemantauan kinerja operasional, membantu klien kami mencapai efisiensi yang signifikan dan meningkatkan visibilitas bisnis
+                        </p>
+                        <a href="" class="btn btn-primary text-light">Read More</a>
+                    </div>
+                    <div class="card">
+                        <div class="card-thumbnail">
+                            <img src="{% static 'assets\images\data.png' %}">
+                        </div>
+                        <div class="card-title">
+                            Big Data Analytics Deployment for E-Commerce Platform
+                        </div>
+                        <p>
+                            Melaksanakan implementasi solusi Big Data Analytics untuk platform e-commerce besar, memungkinkan analisis mendalam terhadap perilaku pelanggan, tren pasar, dan performa produk. Dengan menggunakan teknik analisis data tingkat lanjut, kami membantu klien kami mengoptimalkan strategi pemasaran mereka, meningkatkan personalisasi pengalaman pelanggan, dan merespons dinamika pasar dengan lebih cepat
+                        </p>
+                        <a href="" class="btn btn-primary text-light">Read More</a>
+                    </div>
+                    <div class="card">
+                        <div class="card-thumbnail">
+                            <img src="{% static 'assets\images\cyber.jpeg' %}">
+                        </div>
+                        <div class="card-title">
+                            Cybersecurity Enhancement for Financial Institution
+                        </div>
+                        <p>
+                            Meningkatkan keamanan siber untuk lembaga keuangan melalui implementasi solusi keamanan informasi yang canggih. Proyek ini mencakup penerapan sistem deteksi ancaman, manajemen akses, dan audit keamanan untuk melindungi data keuangan sensitif. Hasilnya adalah peningkatan signifikan dalam ketahanan terhadap serangan siber dan pemenuhan standar keamanan industri
+                        </p>
+                        <a href="" class="btn btn-primary text-light">Read More</a>
+                    </div>
+                </div>
+           <section id="contact">
+    <div class="section-title">
+    </div>
+    <div class="contact-box">
+        <form action="" class="contact-form d-flex flex-column">
+            <input type="text" class="form-control" placeholder="First Name" id="first_name" name="first_name">
+            <input type="text" class="form-control" placeholder="Last Name" id="last_name" name="last_name">
+            <input type="email" class="form-control" placeholder="E-mail Adress" id="email" name="email">
+            <textarea name="message" id="message" cols="30" rows="4" class="form-control" placeholder="Message"></textarea>
+            <button type="submit" class="btn">SEND MESSAGE</button>
+        </form>
+        <section id="contact">
+            <div class="section-title">
+                Contact Us
+            </div>
+        <div class="contact-details d-flex flex-column">
+            <span class="contact-email">
+                <i class="fas fa-envelope"></i>
+                <h3>support@xtechsolution.com</h3>
+            </span>
+            <span class="contact-phone">
+                <i class="fas fa-phone"></i>
+                <h3>(021) 4825 661</h3>
+            </span>
+            <span class="contact-adress">
+                <i class="fas fa-location-dot"></i>
+                <h3>Mega City No.11 , Bekasi </h3>
+            </span>
+        </div>
+    </div>
+</section>
+            {% endblock main %}
+        </main>
+    </div>
+    {% endblock content %}
+    <!-- Footer -->
+    {% block footer %}
+    <footer class="bg-primary d-flex p-2">
+        <span class="text-light text-center m-auto">All rights reserverd &copy; X-Tech Solutions .inc</span>
+    </footer>
+    {% endblock footer %}
+</body>
+
+</html>
