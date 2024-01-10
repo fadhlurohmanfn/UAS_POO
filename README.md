@@ -9,7 +9,7 @@
 
 1. Who Are We
 
-<img src="{% static 'assets\images\1.jpg' %}">
+![Project Screenshot](/static/assets/images/1.png)
 
 
 
