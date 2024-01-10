@@ -9,7 +9,7 @@
 
 1. Who Are We
 
-<img src="assets\images\1.jpg">
+<img src="{% static 'assets\images\1.jpg' %}">
 
 
 
