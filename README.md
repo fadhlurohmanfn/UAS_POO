@@ -11,9 +11,17 @@
 
 ![Project Screenshot](/static/assets/images/1.png)
 
+2. Our Team
 
+![Project Screenshot](/static/assets/images/2.png)
 
+3. Our Service
 
+![Project Screenshot](/static/assets/images/3.png)
+
+4. Our Works
+
+![Project Screenshot](/static/assets/images/4.png)
 
 ## Installation
 
