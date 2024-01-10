@@ -1,3 +1,20 @@
+## Simple Agency (X-Tech Solution)
+
+1. M. Farhan Fahreza
+2. Fadhlurohman Fatikh Navintino
+3. Dhefi Nurholik
+4. M. Rizky Raka Pratama
+
+## Gambar Project
+
+1. Who Are We
+
+<img src="assets\images\1.jpg">
+
+
+
+
+
 ## Installation
 
 To set up the project locally, follow these steps:
